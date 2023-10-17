@@ -1,0 +1,143 @@
+openapi: 3.0.1
+info:
+  title: 'mastercom_api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+  version: '1.0'
+paths:
+  /api/Agenda:
+    get:
+      tags:
+        - Agenda
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                UserId:
+                  type: integer
+                  format: int32
+                UserKey:
+                  type: string
+            encoding:
+              UserId:
+                style: form
+              UserKey:
+                style: form
+      responses:
+        '200':
+          description: Success
+  /api/Assenze:
+    get:
+      tags:
+        - Assenze
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                UserId:
+                  type: integer
+                  format: int32
+                UserKey:
+                  type: string
+            encoding:
+              UserId:
+                style: form
+              UserKey:
+                style: form
+      responses:
+        '200':
+          description: Success
+  /api/Compiti:
+    get:
+      tags:
+        - Compiti
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                UserId:
+                  type: integer
+                  format: int32
+                UserKey:
+                  type: string
+            encoding:
+              UserId:
+                style: form
+              UserKey:
+                style: form
+      responses:
+        '200':
+          description: Success
+  /api/Login:
+    post:
+      tags:
+        - Login
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                User:
+                  type: string
+                PasswordUser:
+                  type: string
+            encoding:
+              User:
+                style: form
+              PasswordUser:
+                style: form
+      responses:
+        '200':
+          description: Success
+  /api/Orario:
+    get:
+      tags:
+        - Orario
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                UserId:
+                  type: integer
+                  format: int32
+                UserKey:
+                  type: string
+            encoding:
+              UserId:
+                style: form
+              UserKey:
+                style: form
+      responses:
+        '200':
+          description: Success
+  /api/Voti:
+    get:
+      tags:
+        - Voti
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                UserId:
+                  type: integer
+                  format: int32
+                UserKey:
+                  type: string
+            encoding:
+              UserId:
+                style: form
+              UserKey:
+                style: form
+      responses:
+        '200':
+          description: Success
+components: { }
