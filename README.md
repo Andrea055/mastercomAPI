@@ -8,7 +8,7 @@ L'endpoint login esegue la query verso la pagina login usando password_user e us
 
 Il routing di tutte le altre pagine del registro viene regolato da una query in index.php specificando stato_principale=NOME_PAGINA, le informazioni prese con HTML scraping.
 
-Specifica openAPI: 
+Specifica openAPI: <a href="https://andrea055.github.io/mastercomAPI/">Link</a>
 
 EN:
 
@@ -18,4 +18,4 @@ The login endpoint queries the login page using password_user and user, this end
 
 The routing of all other registry pages is governed by a query in index.php specifying main_status=PAGE_NAME, the information taken with HTML scraping.
 
-openAPI specification: 
+openAPI specification: <a href="https://andrea055.github.io/mastercomAPI/">Link</a>
