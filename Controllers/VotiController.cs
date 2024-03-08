@@ -35,7 +35,7 @@ namespace mastercom_api.Controllers
         {
             var dataTipo = GetDateAndType(CleanupString(index1));
             var materiaInsegnante = index2.Replace("  ", string.Empty).Split('\n');
-            var voto = CleanupString(index0);
+            var voto = CleanupString(index0).Replace('.', ',');
             Console.WriteLine(voto);
             if(voto == "O")
                 voto = "8";
@@ -50,8 +50,12 @@ namespace mastercom_api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromForm] GenericEndpointRequest payload)
+        public async Task<IActionResult> Get([FromQuery] int UserId, String UserKey)
         {
+            var payload = new GenericEndpointRequest{
+                UserId = UserId,
+                UserKey = UserKey
+            };
             var htmlDoc = await mastercomAPI.doRequest(payload, "voti");
 
             var votiRawTable = new HtmlDocument();
