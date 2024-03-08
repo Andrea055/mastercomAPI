@@ -1,6 +1,6 @@
 public class Voto
 {
-    public short VotoNum { get; set; }
+    public double VotoNum { get; set; }
     public string Materia { get; set; } = "";
     public string Insegnante { get; set; } = "";
 

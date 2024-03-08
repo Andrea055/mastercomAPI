@@ -35,9 +35,13 @@ namespace mastercom_api.Controllers
         {
             var dataTipo = GetDateAndType(CleanupString(index1));
             var materiaInsegnante = index2.Replace("  ", string.Empty).Split('\n');
+            var voto = CleanupString(index0);
+            Console.WriteLine(voto);
+            if(voto == "O")
+                voto = "8";
             return new Voto
             {
-                VotoNum = Convert.ToInt16(CleanupString(index0)),
+                VotoNum = Convert.ToDouble(voto),
                 Materia = materiaInsegnante[1],
                 Insegnante = materiaInsegnante[3],
                 Data = dataTipo[0],
